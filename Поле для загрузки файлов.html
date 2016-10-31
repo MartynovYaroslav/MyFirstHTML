@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Испытание: редактирование профиля</title>
+    </head>
+    <body>
+        <h1>Профиль</h1>
+
+        <form action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data">
+<!-- Чтобы поле заработало и браузер смог передать выбранные
+файл на сервер, необходимо добавить форме атрибут enctype со значением multipart/form-data-->            
+              <label>
+                Ваш пол:
+<input type="radio" name="Муржской" value="p"> Мужской
+                <input type="radio" name="Женский" value="b" checked> Женский
+            </label><br>
+           Месяц и год рождения:<br>
+         <!--список-->  
+         <select name="month">
+                <option value="January">Январь</option>
+                 </select>  
+        <select name="year">
+                <option value="1990">1990</option>
+                 </select> <br> 
+                Знакомые технологии:<br>
+        <select name="technology" size="4" <!--сколько показует-->>
+          <option value="HTML">HTML</option>
+          <option value="CSS"selected>CSS</option>
+          <option value="Java.Script">Java.Script</option>
+          <option value="Node.js">Node.js</option>
+                 </select>  <br> 
+    <!--Поле для загрузки файлов — это тег <input> с типом file.
+          Для этого поля обязательным атрибутом является имя.-->
+    Фото: <input type="file" name="avatar"> 
+    <!--Скрытое поле — это тег <input> с типом hidden.-->  
+    <input type="hidden" name="account_number" value="15">
+    <br>
+    <input type="submit" value=" Сохранить"> 
+          
+           
+        </form>
+    </body>
+</html>
